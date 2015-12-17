@@ -16,6 +16,18 @@
 				document.getElementById("loader").style.display = (show ? "block" : "none");
 			}
 
+			function gitHubSignUp() {
+				// Show the loader
+				showLoader(true);
+				UserApp.OAuth.getAuthorizationUrl({ provider_id: 'github', redirect_uri: 'http://jonparker.github.io/login' }, 
+					function(error, result) {
+						if (!error) {
+							window.location.href = result.authorization_url;
+						}
+					}
+				);
+			}
+
 			function signup() {
 				// Show the loader
 				showLoader(true);
@@ -54,6 +66,9 @@
 		<div class="container" style="text-align: center;">
 			<form class="form" onsubmit="return signup()">
 				<h2 class="form-heading">Sign up</h2>
+				<div class="form-fields">
+					<a href="#" id="github-signup" click="gitHubSignUp()">Login with Github</a>
+				</div>
 				<div class="form-fields">
 					<input id="name" type="text" class="form-control" placeholder="Name" autofocus>
 					<input id="username" type="text" class="form-control" placeholder="Username" required>
