@@ -16,6 +16,23 @@
   			document.getElementById("loader").style.display = (show ? "block" : "none");
   		}
 
+      function getParameterByName(name) {
+          name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+          var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+              results = regex.exec(location.search);
+          return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+      }
+
+      function checkTokenInUrl(){
+				if (getParameterByName('ua_token'))
+				{
+					localStorage.setItem("token", getParameterByName('ua_token'));
+					location.href = '/';
+				}
+			}
+
+      checkTokenInUrl();
+
   		// Login the user
   		function login() {
   			// Show the loader
