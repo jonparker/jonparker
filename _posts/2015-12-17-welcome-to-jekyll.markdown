@@ -6,5 +6,5 @@ categories: blog welcome
 tags:
 summary: '.NET developer'
 ---
-Hi,  my name's Jonathan Parker and I am a .NET developer.
+Hi, my name's Jonathan Parker and I am a Fullstack .NET developer.
 This is my blog on .NET and other software development topics.
