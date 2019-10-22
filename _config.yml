@@ -19,3 +19,5 @@ github_username:  jonparker
 permalink: pretty
 # Build settings
 markdown: kramdown
+
+theme: jekyll-theme-cayman
