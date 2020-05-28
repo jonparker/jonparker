@@ -7,11 +7,11 @@
 
 # Site settings
 title: Jonathan's Blog
-email: your-email@domain.com
+email: jon@blazorapps.io
 description: > # this means to ignore newlines until "baseurl:"
-  Some of my current interests include Kubernetes, gRPC, React, Blazor and functional programming.
+  Some of my current interests reading Juval Lowy's new book Righting Software, Kubernetes, gRPC, Angular, React, Blazor and functional programming.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://jonparker.github.io.com" # the base hostname & protocol for your site
+url: "http://blazorapps.io" # the base hostname & protocol for your site
 twitter_username: jonathanparker
 github_username:  jonparker
 permalink: pretty
